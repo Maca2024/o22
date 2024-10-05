@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nervus Vagus App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="https://oerlifestyle.com" target="_blank">
+            <img src="OERLOGO.png" alt="OER Logo" class="logo">
+        </a>
+        <button id="toggle-dark-mode">🌙 Dark Mode</button>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <form id="vagus-checklist">
+            <!-- Persoonlijke Informatie Section -->
+            <section class="section">
+                <h2>Persoonlijke Informatie</h2>
+                <div class="input-group">
+                    <label for="name">Naam:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="date">Datum:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="input-group">
+                    <label for="session">Sessie:</label>
+                    <input type="text" id="session" name="session" required>
+                </div>
+            </section>
+
+            <!-- Dynamisch Toegevoegde Vragen Section -->
+            <section class="section" id="dynamic-questions">
+                <h2>Vragenlijst</h2>
+                <!-- Alle vragen worden hier dynamisch geladen door JavaScript -->
+            </section>
+
+            <!-- Aanbevelingen en Submit Button -->
+            <section class="section">
+                <h2>Resultaten en Aanbevelingen</h2>
+                <div id="recommendations"></div>
+                <button type="submit" id="submit-button">Genereer Uitslag</button>
+                <a id="email-results" href="#" style="display:none;">Verstuur Resultaten naar info@oerlifestyle.com</a>
+            </section>
+        </form>
+    </main>
+
+    <!-- JavaScript for handling form events, dynamic UI, dark mode, and results -->
+    <script src="app.js"></script>
+</body>
+</html>
